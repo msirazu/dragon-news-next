@@ -4,13 +4,13 @@ import Header from "@/components/layout/header/Header";
 const PublicLayout = ({ children }) => {
     return (
         <div>
-            <header>
+            <header className="w-11/12 md:w-10/12 mx-auto">
                 <Header/>
             </header>
-            <main>
+            <main className="w-11/12 md:w-10/12 mx-auto">
                 {children}
             </main>
-            <footer>
+            <footer className="w-11/12 md:w-10/12 mx-auto">
                 <Footer/>
             </footer>
         </div>
