@@ -1,9 +1,9 @@
 import Link from "next/link";
 
 const Category = ({ category}) => {
-    
-    const { name, id } = category;
 
+    const { name, id } = category;
+    if (!category) return null;
     return (
         <>
         <Link href={`/category/${id}`}>

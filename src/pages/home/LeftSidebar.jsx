@@ -10,7 +10,7 @@ const LeftSidebar = () => {
             </section>
 
             <ul>
-                {categories.map(category => <Category key={category.id} category={category}/>)}
+                {categories?.map(category => category && <Category key={category.id} category={category}/>)}
             </ul>
         </div>
     );
