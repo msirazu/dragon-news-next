@@ -10,7 +10,7 @@ const NewsContent = () => {
             </section>
 
             <section>
-                {allNews?.map(news => news && <NewsCard key={news.id} news={news}/>)}
+                {allNews.map(news => <NewsCard key={news.id} news={news}/>)}
             </section>
         </div>
     );

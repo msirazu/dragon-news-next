@@ -1,9 +1,10 @@
 import Link from "next/link";
 
 const Category = ({ category}) => {
+    if (!category) return null;
 
     const { name, id } = category;
-    if (!category) return null;
+    
     return (
         <>
         <Link href={`/category/${id}`}>
