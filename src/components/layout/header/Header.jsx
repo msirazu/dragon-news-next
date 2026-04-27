@@ -7,14 +7,12 @@ import MarqueeNews from "./MarqueeNews";
 
 const Header = () => {
   return (
-    <div className="flex justify-center py-10 flex-col">
+    <div className="flex justify-center flex-col">
       <section className="flex flex-col gap-2 justify-center items-center">
         <Link href={"/"}>
           <Image
             alt="logo"
             src={logoImg}
-            width={300}
-            height={100}
             loading="eager"
           />
         </Link>

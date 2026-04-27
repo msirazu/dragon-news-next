@@ -4,10 +4,15 @@
 @theme {
   --color-text-one: #706F6F;
   --color-button-one: #D72050;
+  --color-button-two: #403F3F;
+  --color-text-two: #9F9F9F;
 }
 
 @layer components {
   .btn-one {
     @apply bg-button-one text-white py-2 px-5 rounded-sm cursor-pointer capitalize
+  }
+  .btn-two {
+    @apply bg-button-two text-white py-1 px-5 cursor-pointer capitalize text-[12px]
   }
 }

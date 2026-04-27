@@ -3,13 +3,15 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const NavbarLinks = ({path, title, style}) => {
+const NavbarLinks = ({path, children, style}) => {
     
     const pathname = usePathname();
+
+    const isActive = pathname === path;
     
     return (
-        <Link className={`${style}`} href={path}>
-            {title}
+        <Link className={`${isActive ? 'text-blue-500 font-bold' : ''} text-sm ${style}`} href={path}>
+            {children}
         </Link>
     );
 };
