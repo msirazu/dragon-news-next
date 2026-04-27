@@ -9,4 +9,10 @@ const getNewsData = () => {
     return newsData;
 }
 
-export { getCategoriesData, getNewsData };
+const getCategoriesData2 = async() => {
+    const res = await fetch('https://openapi.programming-hero.com/api/news/categories', {cache: 'no-store'});
+    const data = await res.json();
+    return data;
+}
+
+export { getCategoriesData, getNewsData, getCategoriesData2 };

@@ -1,8 +1,11 @@
-import { getCategoriesData } from "@/lib/allApiData";
+import { getCategoriesData, getCategoriesData2 } from "@/lib/allApiData";
 import Category from "./Category";
 
-const LeftSidebar = () => {
+const LeftSidebar = async() => {
     const categories = getCategoriesData();
+    const categoriesData = await getCategoriesData2();
+    const categories2 = categoriesData.data.news_category;
+
     return (
         <div className="space-y-3">
             <section>
