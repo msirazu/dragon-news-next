@@ -12,7 +12,7 @@ const Navbar = () => {
                 <NavbarLinks path={'/about'}>About</NavbarLinks>
                 <NavbarLinks path={'/career'}>Career</NavbarLinks>
             </div>
-            <div className="flex gap-2 items-center">
+            <div className="flex gap-2 items-center mt-3 md:mt-0">
                 <Image width={25} height={25} alt={'avatar icon'} src={avatarIcon}/>
                 <Link href={'/auth/login'} className="btn-two">login</Link>
             </div>
