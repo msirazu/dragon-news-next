@@ -1,8 +1,5 @@
-import { getNewsData } from "@/lib/allApiData";
-import NewsCard from "./NewsCard";
-
 const NewsContent = () => {
-    const allNews = getNewsData();
+
     return (
         <div>
             <section className="mb-3">
@@ -10,7 +7,7 @@ const NewsContent = () => {
             </section>
 
             <section className="grid grid-cols-1 lg:grid-cols-2 gap-5">
-                {allNews.map(news => <NewsCard key={news.id} news={news}/>)}
+                {/* {allNews.map(news => <NewsCard key={news.id} news={news}/>)} */}
             </section>
         </div>
     );

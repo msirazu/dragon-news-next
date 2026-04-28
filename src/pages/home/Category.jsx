@@ -1,14 +1,14 @@
+import { getCategoryNewsById } from "@/lib/allApiData";
 import Link from "next/link";
 
-const Category = ({ category}) => {
-    if (!category) return null;
+const Category = async({ category}) => {
+    const { category_id, category_name} = category;
+    const category2 = await getCategoryNewsById('01');
 
-    const { name, id } = category;
-    
     return (
         <>
-        <Link href={`/category/${id}`}>
-        <li className="text-text-two text-sm">{name}</li>
+        <Link href={`/category/${category_id}`}>
+        <li className="text-text-two text-sm">{category_name}</li>
         </Link>
         </>
     );

@@ -9,14 +9,14 @@ const NewsCard = ({ news }) => {
 
     return (
         <>
-        <div className="flex flex-col gap-5 pb-5">
-            <h2 className="text-sm font-bold">
+        <div className="flex flex-col gap-5 pb-5 border-b border-gray-200">
+            <h2 className="font-bold">
             {title || 'no-title'}
             </h2>
             <div className='flex justify-center items-center'>
             <Image loading="eager" width={500} height={150} alt={title || "news"} src={image_url || fallbackImg}/>
             </div>
-            <p>{details.slice(0, 250)}...</p>
+            <p className='text-sm'>{details.slice(0, 250)}...</p>
             <Link href={`/news/${id}`}className='btn capitalize'>read more</Link>
         </div>
         </>
